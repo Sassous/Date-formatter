@@ -1,0 +1,116 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* colors */
+  --grey: #dfdfe2;
+  --white: #ffffff;
+  --light-purple: #ad96b5;
+  --dark-purple: #463b4f;
+  --middle-purple: #aa8ab5;
+  --yellow: #ffd44d;
+
+  /* font sizes */
+  --root-font-size: 16px;
+  font-size: var(--root-font-size);
+
+  /* font-families */
+  --font-headline: "Libre Bodoni", serif;
+  --font-family: "Playfair", serif;
+}
+
+body {
+  background-color: var(--light-purple);
+  color: var(--grey);
+  font-family: var(--font-family);
+}
+
+.title-container {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.title {
+  font-size: 2.5rem;
+}
+
+.date-svg {
+  width: 30px;
+  height: 30px;
+}
+
+.divider {
+  margin: auto;
+  width: 150px;
+  height: 10px;
+  background-color: var(--yellow);
+}
+
+.dropdown-container {
+  width: 50%;
+  margin: 40px auto;
+  position: relative;
+}
+
+select {
+  display: block;
+  margin: 20px auto 0;
+  width: 100%;
+  height: 50px;
+  font-size: 100%;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: var(--white);
+  border: none;
+  color: var(--dark-purple);
+  appearance: none;
+  padding: 10px;
+  padding-right: 38px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: color 0.3s ease, background-color 0.3s ease,
+    border-bottom-color 0.3s ease;
+}
+
+.select-icon {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 30px;
+  height: 36px;
+  pointer-events: none;
+  padding-left: 5px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.select-icon svg.icon {
+  transition: fill 0.3s ease;
+  fill: var(--dark-purple);
+}
+
+#current-date {
+  font-size: 2rem;
+  text-align: center;
+}
+
+@media (max-width: 375px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .dropdown-container {
+    width: 80%;
+  }
+
+  .date-svg {
+    display: none;
+  }
+}
